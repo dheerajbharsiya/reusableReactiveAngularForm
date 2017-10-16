@@ -1,0 +1,21 @@
+// base css
+nav {
+    a {
+        &.active {
+        color: #8a7043 !important;
+        }
+     }
+}
+
+.m1-top {
+    margin-top: 8px;
+}
+
+//for inputs validity
+input.ng-invalid.ng-touched {
+    border: 1px solid red !important;
+}
+
+.x2-top {
+    margin-top: 20px;
+}
