@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SigninComponent
+    SigninComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
