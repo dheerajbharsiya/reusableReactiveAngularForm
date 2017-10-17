@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { AuthService } from './../../core/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -10,7 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class SigninComponent implements OnInit {
 
   signInForm: FormGroup;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.signInForm = new FormGroup({
@@ -22,6 +23,8 @@ export class SigninComponent implements OnInit {
   onFormSubmit = () => {
     if(this.signInForm.valid) {
       this.authService.authenticatedUser = true;
+      this.router.navigate(['/aboutus']);
+      
     }
     
   }

@@ -1,3 +1,6 @@
+import { ContactusComponent } from './aboutus/contactus/contactus.component';
+import { TeamComponent } from './aboutus/team/team.component';
+import { ProfileComponent } from './aboutus/profile/profile.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { AppComponent } from './app.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
@@ -11,8 +14,32 @@ const appRoutes: Routes = [
         path: 'home', component: SigninComponent
     },
     {
-        path: 'aboutus', component: AboutusComponent
-    }
+        path: 'login', component: SigninComponent
+    },
+    {
+        path: 'aboutus', component: AboutusComponent,
+        children: [{
+            path: '',
+            redirectTo: 'profile',
+            pathMatch: 'full'
+        },
+        {
+            path: 'profile',
+            component: ProfileComponent
+        },
+        {
+            path: 'team',
+            component: TeamComponent
+        },
+        {
+            path: 'contactus',
+            component: ContactusComponent
+        }
+        ]
+    },
+    {
+        path: '**', component: SigninComponent
+    },
 ];
 
 @NgModule({

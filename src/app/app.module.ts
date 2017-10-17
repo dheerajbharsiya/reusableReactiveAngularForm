@@ -8,13 +8,19 @@ import { HeaderComponent } from './core/header/header.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ProfileComponent } from './aboutus/profile/profile.component';
+import { TeamComponent } from './aboutus/team/team.component';
+import { ContactusComponent } from './aboutus/contactus/contactus.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SigninComponent,
-    AboutusComponent
+    AboutusComponent,
+    ProfileComponent,
+    TeamComponent,
+    ContactusComponent
   ],
   imports: [
     BrowserModule,
