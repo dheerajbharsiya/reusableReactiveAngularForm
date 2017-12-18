@@ -11,6 +11,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ProfileComponent } from './aboutus/profile/profile.component';
 import { TeamComponent } from './aboutus/team/team.component';
 import { ContactusComponent } from './aboutus/contactus/contactus.component';
+import { BtnCommonComponent } from './common/btn-common/btn-common.component';
+import { AddressFormComponent } from './common/address-form/address-form.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ContactusComponent } from './aboutus/contactus/contactus.component';
     AboutusComponent,
     ProfileComponent,
     TeamComponent,
-    ContactusComponent
+    ContactusComponent,
+    BtnCommonComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,

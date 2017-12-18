@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactusComponent implements OnInit {
 
+  private singleButtonName = "Standalone button";
+  private singleButtonClass = "color-grey";
   constructor() { }
 
   ngOnInit() {

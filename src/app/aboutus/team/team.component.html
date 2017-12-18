@@ -1,3 +1,11 @@
-<p>
-  team works!
-</p>
+<div>
+    <app-address-form  
+      [formBtnName]="teamBtnName"
+      [formBtnClasses]="teamBtnClasses"
+      [formHeading]="teamHeading"
+      (submitted)="teamSubmit($event)"
+    ></app-address-form>
+    <div *ngIf="submitted">
+      Address details submitted from team component
+    </div>
+  </div>

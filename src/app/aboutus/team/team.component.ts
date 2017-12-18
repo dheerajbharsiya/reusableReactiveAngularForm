@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TeamComponent implements OnInit {
 
+  private teamBtnName = "Team Details";
+  private teamBtnClass = "myclass";
+  private submitted: boolean;
+  private teamHeading = "Team Address Form";
   constructor() { }
 
   ngOnInit() {
+  }
+
+  public teamSubmit() : void {
+    this.submitted = true;
   }
 
 }

@@ -38,7 +38,7 @@ const appRoutes: Routes = [
         ]
     },
     {
-        path: '**', component: SigninComponent
+        path: '**', component: AboutusComponent
     },
 ];
 

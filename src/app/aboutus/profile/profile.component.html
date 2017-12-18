@@ -1,3 +1,11 @@
-<p>
-  profile works!
-</p>
+<div>
+  <app-address-form  
+    [formBtnName]="profileBtnName"
+    [formBtnClasses]="profileBtnClasses"
+    (submitted)="profileSubmit($event)"
+    [formHeading] = "profileHeading"
+  ></app-address-form>
+  <div *ngIf="submitted">
+    Address details submitted from profile
+  </div>
+</div>
