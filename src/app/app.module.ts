@@ -13,6 +13,7 @@ import { TeamComponent } from './aboutus/team/team.component';
 import { ContactusComponent } from './aboutus/contactus/contactus.component';
 import { BtnCommonComponent } from './common/btn-common/btn-common.component';
 import { AddressFormComponent } from './common/address-form/address-form.component';
+import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddressFormComponent } from './common/address-form/address-form.compone
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DynamicFormModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

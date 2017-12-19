@@ -1,4 +1,11 @@
 <div class="x2-top">
+
+  <dynamic-form
+    [config]="configData"
+    (submit)="submit($event)">
+  </dynamic-form>
+  {{ form.valid }}
+  {{ form.value | json }}
   <app-btn-common [btnName]="singleButtonName" [btnClasses]="singleButtonClass">
   </app-btn-common>
 </div>

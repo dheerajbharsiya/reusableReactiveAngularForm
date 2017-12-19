@@ -7,6 +7,7 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { NgModule } from '@angular/core';
 import { Routes, PreloadAllModules } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { DynamicFormComponent } from './dynamic-form/containers/dynamic-form/dynamic-form.component';
 
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,7 +34,7 @@ const appRoutes: Routes = [
         },
         {
             path: 'contactus',
-            component: ContactusComponent
+            component: DynamicFormComponent
         }
         ]
     },

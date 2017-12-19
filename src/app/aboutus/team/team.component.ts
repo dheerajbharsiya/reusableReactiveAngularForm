@@ -11,6 +11,8 @@ export class TeamComponent implements OnInit {
   private teamBtnClass = "myclass";
   private submitted: boolean;
   private teamHeading = "Team Address Form";
+  private singleButtonName = "Standalone button";
+  private singleButtonClass = "color-grey";
   constructor() { }
 
   ngOnInit() {
