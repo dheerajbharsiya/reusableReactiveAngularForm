@@ -1,0 +1,10 @@
+<div [formGroup]="fgroup">
+  <div class="col-xs-2 text-left">
+    <label for="lastName">{{values.label}}</label>
+  </div>
+  <div class="col-xs-10">
+    <select formControlName="country" class="form-control col-xs-3">
+      <option *ngFor="let value of values.data" [ngValue]="value.value">{{value.value}}</option>
+    </select>
+  </div>
+</div>

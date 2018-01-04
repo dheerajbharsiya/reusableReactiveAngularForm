@@ -16,6 +16,7 @@ import { AddressFormComponent } from './common/address-form/address-form.compone
 import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 import { DynamicForm1Module } from './dynamic-form1/dynamic-form1.module';
 import { LifehooksComponent } from './lifehooks/lifehooks.component';
+import { DropdownListComponent } from './common/dropdown-list/dropdown-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LifehooksComponent } from './lifehooks/lifehooks.component';
     ContactusComponent,
     BtnCommonComponent,
     AddressFormComponent,
-    LifehooksComponent
+    LifehooksComponent,
+    DropdownListComponent
   ],
   imports: [
     BrowserModule,

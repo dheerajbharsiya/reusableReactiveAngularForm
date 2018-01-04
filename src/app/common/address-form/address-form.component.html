@@ -53,10 +53,14 @@
               <div class="help-block" *ngIf="addressForm.get('state').errors.state && !addressForm.get('state').errors.required">Email is invalid.</div>
             </div>
           </div>
+          <dropdown-list [fgroup]="addressForm" class="form-group col-xs-12" [values]="dropdonwValues" ></dropdown-list>
+
           <div class="form-group col-xs-12">
             <app-btn-common [btnName]="formBtnName" [btnClasses]="formBtnClasses" [isDisabled]="!addressForm.valid" type="submit">
             </app-btn-common>
           </div>
+          <h3>{{addressForm.value|json}}</h3>
+          
         </form>
       </div>
 
