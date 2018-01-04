@@ -8,12 +8,10 @@ import { FieldConfig } from '../../dynamic-form/models/field-config.interface';
   styleUrls: ['./contactus.component.scss']
 })
 export class ContactusComponent implements OnInit {
-
-  public configData: FieldConfig[];
-  constructor() {
-    
-  this.configData = 
-  [
+  testVal : string = "in app comp";
+  singleButtonName = "standalone button";
+  
+  public configData: FieldConfig[] = [
     {
       type: 'input',
       label: 'Full name',
@@ -35,7 +33,10 @@ export class ContactusComponent implements OnInit {
       type: 'button'
     }
   ];
-   }
+
+  constructor() {
+
+  }
 
   ngOnInit() {
   }

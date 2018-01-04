@@ -14,6 +14,8 @@ import { ContactusComponent } from './aboutus/contactus/contactus.component';
 import { BtnCommonComponent } from './common/btn-common/btn-common.component';
 import { AddressFormComponent } from './common/address-form/address-form.component';
 import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
+import { DynamicForm1Module } from './dynamic-form1/dynamic-form1.module';
+import { LifehooksComponent } from './lifehooks/lifehooks.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +27,16 @@ import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
     TeamComponent,
     ContactusComponent,
     BtnCommonComponent,
-    AddressFormComponent
+    AddressFormComponent,
+    LifehooksComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    DynamicFormModule
+    DynamicFormModule,
+    DynamicForm1Module
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

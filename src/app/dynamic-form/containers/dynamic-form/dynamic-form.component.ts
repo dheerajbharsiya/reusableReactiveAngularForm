@@ -22,28 +22,7 @@ import { FieldConfig } from '../../models/field-config.interface';
   `
 })
 export class DynamicFormComponent implements OnChanges, OnInit {
-  @Input("config") config: FieldConfig[] = [
-    {
-      type: 'input',
-      label: 'Full name',
-      name: 'name',
-      placeholder: 'Enter your name',
-      validation: []
-    },
-    {
-      type: 'select',
-      label: 'Favourite Food',
-      name: 'food',
-      options: ['Pizza', 'Hot Dogs', 'Knakworstje', 'Coffee'],
-      placeholder: 'Select an option',
-      validation: []
-    },
-    {
-      label: 'Submit',
-      name: 'submit',
-      type: 'button'
-    }
-  ];
+  @Input("config") config: FieldConfig[] = [];
 
   @Output()
   submit: EventEmitter<any> = new EventEmitter<any>();

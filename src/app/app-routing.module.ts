@@ -34,7 +34,7 @@ const appRoutes: Routes = [
         },
         {
             path: 'contactus',
-            component: DynamicFormComponent
+            component: ContactusComponent
         }
         ]
     },
