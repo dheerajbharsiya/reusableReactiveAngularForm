@@ -29,6 +29,7 @@ export class AddressFormComponent implements OnInit {
       'city': new FormControl(null, Validators.required),
       'state': new FormControl(null, Validators.required),
       'country': new FormControl(null, Validators.required),
+      'date': new FormControl(null, Validators.required),
     });
   }
 

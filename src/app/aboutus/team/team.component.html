@@ -1,13 +1,3 @@
 <div>
-    <app-address-form  
-      [formBtnName]="teamBtnName"
-      [formBtnClasses]="teamBtnClasses"
-      [formHeading]="teamHeading"
-      (submitted)="teamSubmit($event)"
-    ></app-address-form>
-    <div *ngIf="submitted">
-      Address details submitted from team component
-    </div>
-    <app-btn-common [btnName]="singleButtonName" [btnClasses]="singleButtonClass">
-    </app-btn-common>
+  <button class="btn btn-lg btn-outline-primary" (click)="open()">Launch demo modal</button>
 </div>

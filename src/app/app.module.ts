@@ -17,7 +17,13 @@ import { DynamicFormModule } from './dynamic-form/dynamic-form.module';
 import { DynamicForm1Module } from './dynamic-form1/dynamic-form1.module';
 import { LifehooksComponent } from './lifehooks/lifehooks.component';
 import { DropdownListComponent } from './common/dropdown-list/dropdown-list.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DatepickerComponent } from './common/datepicker/datepicker.component';
+import { NgbCalendar } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-calendar';
+import { ModalCommonComponent } from './common/modal-common/modal-common.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { ModalOpenerService } from './common/modal-common/modal-opener.service';
+import { ModalBinderService } from './common-services/modal-binder.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +36,10 @@ import { DropdownListComponent } from './common/dropdown-list/dropdown-list.comp
     BtnCommonComponent,
     AddressFormComponent,
     LifehooksComponent,
-    DropdownListComponent
+    DropdownListComponent,
+    DatepickerComponent,
+    ModalCommonComponent,
+    CustomerDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +47,11 @@ import { DropdownListComponent } from './common/dropdown-list/dropdown-list.comp
     FormsModule,
     ReactiveFormsModule,
     DynamicFormModule,
-    DynamicForm1Module
+    DynamicForm1Module,
+    NgbModule.forRoot()
   ],
-  providers: [AuthService],
-  bootstrap: [AppComponent]
+  providers: [AuthService, ModalOpenerService, ModalBinderService],
+  bootstrap: [AppComponent],
+  entryComponents: [ModalCommonComponent, CustomerDetailComponent]
 })
 export class AppModule { }

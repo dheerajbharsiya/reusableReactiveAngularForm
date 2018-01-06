@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
+import { ModalCommonComponent } from '../../common/modal-common/modal-common.component';
+import { ModalOpenerService } from '../../common/modal-common/modal-opener.service';
+
 
 @Component({
   selector: 'app-team',
@@ -13,13 +17,17 @@ export class TeamComponent implements OnInit {
   private teamHeading = "Team Address Form";
   private singleButtonName = "Standalone button";
   private singleButtonClass = "color-grey";
-  constructor() { }
+  constructor(private modalService: ModalOpenerService) { }
 
   ngOnInit() {
   }
 
-  public teamSubmit() : void {
+  public teamSubmit(): void {
     this.submitted = true;
+  }
+
+  open() {
+    this.modalService.openModal('teamModal');
   }
 
 }
