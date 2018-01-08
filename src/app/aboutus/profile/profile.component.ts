@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { CustomerQueryService } from '../../common-services/customer-query.service';
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +13,7 @@ export class ProfileComponent implements OnInit {
   public profileBtnClasses = "my-profile";
   private profileHeading = "Profile Address Form"
   private submitted: boolean;
-  constructor() { }
+  constructor(private queryService: CustomerQueryService) { }
 
   ngOnInit() {
   }
@@ -20,6 +21,7 @@ export class ProfileComponent implements OnInit {
   public profileSubmit(data) : void {
     console.log(data);
     this.submitted = true;
+    this.queryService.setCustomerQueryData(data);
   }
 
 }

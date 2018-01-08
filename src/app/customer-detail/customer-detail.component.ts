@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Input, Component, OnInit } from '@angular/core';
+import { ModalBinderService } from '../common-services/modal-binder.service';
+import { ModalOpenerService } from '../common/modal-common/modal-opener.service';
+import { DataManagerService } from '../common/modal-common/data-manager.service';
 
 @Component({
   selector: 'app-customer-detail',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./customer-detail.component.scss']
 })
 export class CustomerDetailComponent implements OnInit {
-
-  constructor() { }
+  private data: any = {};
+  constructor(private dataManager: DataManagerService) { }
 
   ngOnInit() {
+    this.data = this.dataManager.getModalData();
+  }
+
+  onClick() {
+    console.log('customer info clicked');
   }
 
 }

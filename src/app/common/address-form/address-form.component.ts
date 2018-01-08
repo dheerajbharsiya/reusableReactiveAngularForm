@@ -24,6 +24,7 @@ export class AddressFormComponent implements OnInit {
 
   ngOnInit() {
     this.addressForm = new FormGroup({
+      'name': new FormControl(null, Validators.required),
       'street': new FormControl(null, Validators.required),
       'town': new FormControl(null, Validators.required),
       'city': new FormControl(null, Validators.required),
@@ -35,7 +36,7 @@ export class AddressFormComponent implements OnInit {
 
   public onFormSubmit(): void {
     if (this.addressForm.valid) {
-      this.submitted.emit('Submit button clicked');
+      this.submitted.emit(this.addressForm.value);
     } else {
       this.formSumitted = true;
     }

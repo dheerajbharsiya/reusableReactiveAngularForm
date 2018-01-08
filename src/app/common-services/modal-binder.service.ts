@@ -4,7 +4,7 @@ import { ModalCommonComponent } from "../common/modal-common/modal-common.compon
 @Injectable()
 export class ModalBinderService {
     private rootViewContainer: any;
-    constructor(private factoryResolver: ComponentFactoryResolver) { }
+    constructor(private factoryResolver: ComponentFactoryResolver) { };
     public currentModalCompName: string = '';
     private modalComponents: any = [
         { 'teamModal': CustomerDetailComponent }
@@ -14,8 +14,9 @@ export class ModalBinderService {
         this.rootViewContainer = viewContainerRef
     }
 
-    addDynamicComponent() {
+    addDynamicComponent(data: any) {
         const factory = this.factoryResolver.resolveComponentFactory(this.getModalComponent());
+       // this.getModalComponent().componentInstance.modalComponentData = data;
         const component = factory.create(this.rootViewContainer.parentInjector);
         this.rootViewContainer.insert(component.hostView);
     }
@@ -34,4 +35,5 @@ export class ModalBinderService {
         }
         return this.dynamicComponent;
     }
+    
 }

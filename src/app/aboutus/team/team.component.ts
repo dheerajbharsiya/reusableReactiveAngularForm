@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
 import { ModalCommonComponent } from '../../common/modal-common/modal-common.component';
 import { ModalOpenerService } from '../../common/modal-common/modal-opener.service';
+import { CustomerQuery } from '../../models/customer-query.model';
+import { CustomerQueryService } from '../../common-services/customer-query.service';
 
 
 @Component({
@@ -17,9 +19,12 @@ export class TeamComponent implements OnInit {
   private teamHeading = "Team Address Form";
   private singleButtonName = "Standalone button";
   private singleButtonClass = "color-grey";
-  constructor(private modalService: ModalOpenerService) { }
+  private queries: CustomerQuery[];
+
+  constructor(private modalService: ModalOpenerService, private querySerivce: CustomerQueryService) { }
 
   ngOnInit() {
+    this.queries = this.querySerivce.getCustomerQueryDetails();
   }
 
   public teamSubmit(): void {
@@ -27,7 +32,7 @@ export class TeamComponent implements OnInit {
   }
 
   open() {
-    this.modalService.openModal('teamModal');
+    this.modalService.openModal('teamModal', this.queries);
   }
 
 }

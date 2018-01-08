@@ -6,6 +6,19 @@
         <form name="form" (ngSubmit)="onFormSubmit()" [formGroup]="addressForm" novalidate>
           <div class="form-group col-xs-12">
             <div class="col-xs-2 text-left">
+              <label for="lastName">Name</label>
+            </div>
+            <div class="col-xs-10">
+              <input type="text" placeholder="MR Bean" class="form-control col-xs-3" name="name" formControlName="name" />
+            </div>
+
+            <div *ngIf="addressForm.get('name').errors && addressForm.get('name').touched" class="col-xs-10 col-xs-offset-2">
+              <div class="help-block" *ngIf="addressForm.get('name').errors.required">name is required</div>
+              <div class="help-block" *ngIf="addressForm.get('name').errors.name && !addressForm.get('name').errors.required">Email is invalid.</div>
+            </div>
+          </div>
+          <div class="form-group col-xs-12">
+            <div class="col-xs-2 text-left">
               <label for="lastName">Street</label>
             </div>
             <div class="col-xs-10">

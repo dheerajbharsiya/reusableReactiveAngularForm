@@ -24,6 +24,8 @@ import { ModalCommonComponent } from './common/modal-common/modal-common.compone
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 import { ModalOpenerService } from './common/modal-common/modal-opener.service';
 import { ModalBinderService } from './common-services/modal-binder.service';
+import { CustomerQueryService } from './common-services/customer-query.service';
+import { DataManagerService } from './common/modal-common/data-manager.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +52,7 @@ import { ModalBinderService } from './common-services/modal-binder.service';
     DynamicForm1Module,
     NgbModule.forRoot()
   ],
-  providers: [AuthService, ModalOpenerService, ModalBinderService],
+  providers: [AuthService, ModalOpenerService, ModalBinderService, CustomerQueryService, DataManagerService],
   bootstrap: [AppComponent],
   entryComponents: [ModalCommonComponent, CustomerDetailComponent]
 })
